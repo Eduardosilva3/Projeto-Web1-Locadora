@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de filme</title>
+</head>
+<link rel="stylesheet" href="../css/telaprincipal.css">
+<body>
+    
+    <div class="flex-container-menu">
+        <div><a href="cadastro.html"><img src="../img/voltar3.png" alt=""  height="30" width="70"></a></div>
+        
+        <div><h2>Cadastros de Filmes</h2></div>
+        <div><button><a href="../index.html">Sair</a></button></div>
+
+   </div>
+   
+    <div id="divnavegacao">
+        <div><a href="telaprincipal.html"><img id="imag" src="../img/ES LOkadora sem marca.png" alt=""></a></div>
+    </div>
+
+    
+    <div class="flex-item-titulo-cadastro">
+        <h2>Cadastrar Filme</h2>
+    </div>
+   
+    <form action="cadastro.html" method="get">
+        <fieldset>
+            <legend><label for="titulofilme">Título</label></legend>
+            
+            <input type="text" name="" id="titulofilme"  size="40"  placeholder="Digite o titulo do filme">
+        </fieldset>
+        
+        <p>
+            <fieldset>
+                <legend ><label for="generofilme">Gênero</label></legend>
+        
+            <select name="" id="generofilme">
+            <option value="Ação"> Ação</option>
+            <option value="Comédia"> Comédia</option>
+            <option value="Drama"> Drama</option>
+            <option value="Romance">Romance</option>
+            <option value="Terror">Terror</option>
+
+             </select>
+            </fieldset>
+            
+
+        </p>
+        <p>
+            <fieldset>
+            <legend>Premiaçôes do Filme</legend>
+            <input type="checkbox" name="" id="oscar">
+            <label for="oscar">Óscar</label>
+            <input type="checkbox" name="" id="grammy">
+            <label for="grammy">Grammy</label>
+            <input type="checkbox" name="" id="brasileiro">
+            <label for="brasileiro">Grande prêmio do cinema brasileiro</label>
+            <input type="checkbox" name="" id="globo">
+            <label for="globo">Globo de Ouro</label>
+            <input type="checkbox" name="" id="asian">
+            <label for="asian">Asian Film Awards</label>
+            <input type="checkbox" name="" id="nenhum">
+            <label for="nenhum">Nenhum Prêmio</label>
+            </fieldset>
+            
+            
+        </p>
+        <p>
+            <fieldset>
+                <legend><label for="descricao">Descrição:</label></legend>
+                <textarea name="" id="descricao" cols="40" rows="10" placeholder="Digite a descrição do filme..."></textarea>
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend>Finalizar cadastro</legend>
+                <button class="buttonforms" type="submit" onclick="alert('Cadastro Realizado')">Cadastrar</button>
+                <button class="buttonforms" type="reset" onclick="alert('Deseja limpar todos os campos?')">Limpar</button>
+            </fieldset>
+        </p>
+        
+    </form>
+</body>
+</html>

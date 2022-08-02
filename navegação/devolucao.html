@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolução</title>
+</head>
+<link rel="stylesheet" href="../css/telaprincipal.css">
+<body>
+    <div class="flex-container-menu">
+        <div><a href="telaprincipal.html"><img src="../img/voltar3.png" alt=""  height="30" width="70"></a></div>
+        
+        <div><h2>Devolução do Filme</h2></div>
+        <div><button><a href="../index.html">Sair</a></button></div>
+
+   </div>
+   
+    <div id="divnavegacao">
+        <div><a href="telaprincipal.html"><img id="imag" src="../img/ES LOkadora sem marca.png" alt=""></a></div>
+    </div>
+    
+    <div class="flex-item-titulo-cadastro">
+        <h2>Sistema de Devolução</h2>
+    </div>
+    
+    
+    <form action="telaprincipal.html" method="get">
+        <p>
+            <fieldset>
+                <legend>Selecionar Cliente</legend>
+                <select name="" id="locacaocliente">
+                    <option value="Eduardo">Eduardo Silva</option>
+                    <option value="raul">Raul</option>
+                    <option value="renato">Renato</option>
+                    <option value="samuel">Samuel</option>
+                    <option value="lucas">Lucas</option>
+    
+                </select>
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend>Data da Entrega</legend>
+                <input type="date" name="" id="entregadevolucao"><br><br>
+                <label for="status">Status:</label><br>
+                <input type="radio" name="statusentrega" id="dentrop">
+                <label for="dentrop">Dentro do Prazo</label>
+                <input type="radio" name="statusentrega" id="atrasado">
+                <label for="atrasado">Atrasado</label>
+            </fieldset>
+
+        </p>
+        <p>
+            <fieldset>
+                <legend>Observações</legend>
+                <textarea name="" id="observadevolucao" cols="40" rows="10" placeholder="Digite observações sobre a devolução..."></textarea>
+                
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend>Finalizar Devolução</legend>
+                <button class="buttonforms" type="submit" onclick="alert('Cadastro Realizado')">Cadastrar</button>
+                <button class="buttonforms" type="reset" onclick="alert('Deseja limpar todos os campos?')">Limpar</button>
+            </fieldset>
+        </p>
+    </form>
+
+</body>
+</html>

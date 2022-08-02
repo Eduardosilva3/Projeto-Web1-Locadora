@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Usuario</title>
+</head>
+<link rel="stylesheet" href="../css/telaprincipal.css">
+<body>
+    <div class="flex-container-menu">
+        <div><a href="../index.html"><img src="../img/voltar3.png" alt=""  height="30" width="70"></a></div>
+        
+        <div><h2>Cadastros de Usuário</h2></div>
+        <div><button><a href="../index.html">Sair</a></button></div>
+
+   </div>
+   
+    <div id="divnavegacao">
+        <div><a href="../index.html"><img id="imag" src="../img/ES LOkadora sem marca.png" alt=""></a></div>
+    </div>
+    
+    <div class="flex-item-titulo-cadastro">
+        <h1>Cadastrar novo Usuario</h1>
+    </div>
+    
+    <form action="../index.html" method="get">
+        <p>
+            <fieldset>
+                <legend><label for="nome">Nome</label></legend>
+                <input type="text" placeholder="Digite seu nome" name="" id="nome" size="40" maxlength="30">
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend><label for="sexo">Sexo</label></legend>
+                <input type="radio" name="sexo" id="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="feminino">
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="sexo" id="naodecl">
+                <label for="naodecl">Não Declarar</label>
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend><label for="preferencia">Preferências de Gênero</label></legend>
+                <input type="checkbox" name="" id="acao">
+                <label for="acao">Ação</label>
+                <input type="checkbox" name="" id="comedia">
+                <label for="comedia">Comédia</label>
+                <input type="checkbox" name="" id="drama">
+                <label for="drama">Drama</label>
+                <input type="checkbox" name="" id="romance">
+                <label for="romance">Romance</label>
+                <input type="checkbox" name="" id="terror">
+                <label for="terror">Terror</label>
+            
+
+             </select>
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend><label for="obs">Observações:</label></legend>
+                <textarea name="" id="obs" cols="40" rows="10" placeholder="Digite observações sobre o Usuário..."></textarea>
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend><label for="email">E-mail</label></legend>
+                <input type="email" name="" id="email" size="40" placeholder="Digite seu e-mail">
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend>Finalizar Cadastro</legend>
+                <button class="buttonforms" type="submit" onclick="alert('Cadastro Finalizado')">Cadastrar</button>
+                <button class="buttonforms" type="reset" onclick="alert('Deseja limpar os dados?')">Limpar</button>
+            </fieldset>
+        </p>
+    </form>
+
+
+        
+    
+</body>
+</html>

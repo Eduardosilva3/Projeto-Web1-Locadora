@@ -1,0 +1,163 @@
+body{
+    background-color: #27498C;
+    margin: auto;
+
+}
+div{
+    margin: auto;
+    
+    
+    
+}
+
+#divnavegacao{
+    
+    
+    
+    display: flex;
+    
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    margin: 10px;
+    border-bottom: #050326 solid;
+    margin-bottom: 30px;
+
+}
+
+#imag{
+    max-width: 200px;
+    max-height: 200px;
+    
+}
+
+img{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+#divop{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+footer{
+    text-align: center;
+    color: aliceblue;
+    background-color: #050326;
+    
+    bottom: 0;
+    position: absolute;
+    
+    width:100%;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.flex-container-menu{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+fieldset{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    
+    text-align: center;
+    border-radius: 5%;
+    border: 5px solid;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 20px 20px 20px 20px;
+    margin-top: auto;
+    position: relative;
+    align-items: center;
+
+}
+
+.buttonforms{
+    margin: 5px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    background-color: #07B2D9;
+    border-radius: 15%;
+    width: 80px;
+    height: 50px;
+}
+
+legend{
+    text-align: center;
+}
+
+.flex-item-titulo-cadastro{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.flex-item-acervo-item{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-item-img{
+    height: 500px;
+    width: 200px;
+    
+}
+
+.flex-item-fild-acervo{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+figure{
+    height: auto;
+}
+
+.acervo-fieldest{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.flex-item-img:hover{
+    
+
+
+    height: 500px;
+    width: 200px;
+}
+
+button:hover{
+    background-color:#05F2F2;;;
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+a:hover{
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+img:hover{
+    max-width: 200px;
+    max-height: 200px;
+    
+}

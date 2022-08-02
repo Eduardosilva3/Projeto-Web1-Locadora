@@ -1,0 +1,78 @@
+body{
+    background-color: #27498C;
+    margin: auto;
+
+}
+#imagem{
+    margin: 10px;
+    max-width: 200px;
+    max-height: 200px;
+    text-align: center;
+}
+#divlogin{
+    margin: auto;
+    
+    text-align: center;
+    border-radius: 5%;
+    border: 5px solid;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 20px 20px 20px 20px;
+    margin-top: auto;
+    position: relative;
+}
+
+#textologin{
+    margin-top: auto;
+}
+
+
+footer{
+    text-align: center;
+    color: aliceblue;
+    background-color: #050326;
+    
+    
+    position:absolute;
+    
+    width:100%;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+button{
+    background-color: #07B2D9;
+    border-radius: 15%;
+    width: 80px;
+    height: 50px;
+}
+
+header{
+    text-align: center;
+    margin: auto;
+    color: aliceblue;
+}
+
+.buttonforms{
+    width: 80px;
+    height: 50px;
+    margin: auto;
+}
+.texto{
+    text-align: center;
+}
+
+button:hover{
+    background-color:#05F2F2;;;
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+a:hover{
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+}
