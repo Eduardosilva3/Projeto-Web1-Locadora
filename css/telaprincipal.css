@@ -161,3 +161,7 @@ img:hover{
     max-height: 200px;
     
 }
+.campoobrigatorio{
+    color: red;
+    
+}

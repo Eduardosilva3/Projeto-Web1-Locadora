@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
+    <style>
+        #divContainer{
+            width: 200px;
+            height: 50px;
+           
+        }
+        #divResultado{
+            background-color: orange;
+            border-radius: 50%;
+
+            color: red;
+            text-align: center;
+           
+        }
+        
+    </style>
 </head>
 <link rel="stylesheet" href="../css/telaprincipal.css">
 <body>
@@ -30,33 +46,41 @@
         <p>
             <fieldset>
                 <legend><label for="nome">Nome</label></legend>
-                <input type="text" placeholder="Digite seu nome" name="" id="nome" size="40" maxlength="30">
+                <input type="text" placeholder="Digite seu nome" name="" id="nome" size="40" maxlength="30" required>
+                <h2 class="campoobrigatorio">*</h2>
             </fieldset>
         </p>
         <p>
             <fieldset>
-                <legend><label for="sexo">Sexo</label></legend>
-                <input type="radio" name="sexo" id="masculino">
+                <legend><label for="sexo" id="sexo">Sexo</label></legend>
+                <input type="radio" name="sexo" id="masculino" required>
                 <label for="masculino">Masculino</label>
                 <input type="radio" name="sexo" id="feminino">
                 <label for="feminino">Feminino</label>
                 <input type="radio" name="sexo" id="naodecl">
                 <label for="naodecl">Não Declarar</label>
+                <h2 class="campoobrigatorio">*</h2>
             </fieldset>
         </p>
         <p>
+            <div id="divContainer">
+                <div id="divResultado"></div>
+    
+               </div>
+                
             <fieldset>
-                <legend><label for="preferencia">Preferências de Gênero</label></legend>
-                <input type="checkbox" name="" id="acao">
+                <legend><label for="preferencia" id="preferencia">Preferências de Gênero</label></legend>
+                <input type="checkbox" name="preferencia" id="acao">
                 <label for="acao">Ação</label>
-                <input type="checkbox" name="" id="comedia">
+                <input type="checkbox" name="preferencia" id="comedia">
                 <label for="comedia">Comédia</label>
-                <input type="checkbox" name="" id="drama">
+                <input type="checkbox" name="preferencia" id="drama">
                 <label for="drama">Drama</label>
-                <input type="checkbox" name="" id="romance">
+                <input type="checkbox" name="preferencia" id="romance">
                 <label for="romance">Romance</label>
-                <input type="checkbox" name="" id="terror">
+                <input type="checkbox" name="preferencia" id="terror">
                 <label for="terror">Terror</label>
+                <h2 class="campoobrigatorio">*</h2>
             
 
              </select>
@@ -70,17 +94,74 @@
         </p>
         <p>
             <fieldset>
-                <legend><label for="email">E-mail</label></legend>
-                <input type="email" name="" id="email" size="40" placeholder="Digite seu e-mail">
+                <legend><label for="email" id="e-mail">E-mail</label></legend>
+                <input type="email" name="" id="email" size="40" placeholder="Digite seu e-mail" required>
+                <h2 class="campoobrigatorio">*</h2>
             </fieldset>
+            <h4 class="campoobrigatorio">* Atenção campos obrigatorios!</h4>
         </p>
         <p>
             <fieldset>
                 <legend>Finalizar Cadastro</legend>
-                <button class="buttonforms" type="submit" onclick="alert('Cadastro Finalizado')">Cadastrar</button>
+                <button class="buttonforms" type="submit" onclick="validarDados()">Cadastrar</button>
                 <button class="buttonforms" type="reset" onclick="alert('Deseja limpar os dados?')">Limpar</button>
             </fieldset>
         </p>
     </form>
+
+    <script>
+        function validarDados(){
+            var divResultado = document.getElementById("divResultado");
+            var nome = document.getElementById("nome");
+           if(nome.value == ""){
+               //alert("Informe o titulo!");
+               alert("Atenção nome não informardo - Informe o nome!")
+               nome.focus();
+               return false;
+
+
+
+           }
+
+           if(document.getElementById("masculino").checked == false
+           &&document.getElementById("feminino").checked == false
+           &&document.getElementById("naodecl").checked == false){
+
+            alert("Atenção sexo não informardo - Informe o sexo!")
+            return false;
+
+           }
+
+           var checkbox = document.getElementsByName("preferencia");
+           var checkboxSelecionado = false;
+           for(var i = 0; i < checkbox.length; i++){
+               if(checkbox[i].checked){
+                   checkboxSelecionado = true;
+               }
+           }
+
+           if(!checkboxSelecionado){
+            divResultado.innerHTML = "Informe pelo menos um gênero!";
+               return false;
+           }
+           divResultado.innerHTML = "";
+          
+           var email = document.getElementById("email");
+           if(email.value == ""){
+               //alert("Informe o titulo!");
+               alert("Atenção E-mail não informardo - Informe o E-mail!")
+               email.focus();
+               return false;
+
+
+
+           }
+
+
+
+           alert("Cadastro bem-Sucedido");
+        }
+
+    </script>
 </body>
 </html>

@@ -30,25 +30,29 @@
     <form action="acervo.html" method="get">
         <fieldset>
             <legend>Selecionar Cliente</legend>
-            <select name="" id="locacaocliente">
+            <select name="" id="locacaocliente" required>
+                <option value=""></option>
                 <option value="Eduardo">Eduardo Silva</option>
                 <option value="raul">Raul</option>
                 <option value="renato">Renato</option>
                 <option value="samuel">Samuel</option>
                 <option value="lucas">Lucas</option>
+                <h2 class="campoobrigatorio">*</h2>
 
             </select>
         </fieldset>
         <p>
             <fieldset>
                 <legend>Data da Locação</legend>
-                <input type="date" name="" id="datalocacao">
+                <input type="date" name="" id="datalocacao" required>
+                <h2 class="campoobrigatorio">*</h2>
             </fieldset>
         </p>
         <p>
             <fieldset>
                 <legend>Data de Entrega</legend>
-                <input type="date" name="" id="dataentrega">
+                <input type="date" name="" id="dataentrega" required>
+                <h2 class="campoobrigatorio">*</h2>
             </fieldset>
         </p>
         <p>
@@ -59,14 +63,42 @@
             </fieldset>
 
         </p>
+        <h4 class="campoobrigatorio">* Atenção campos obrigatorios!</h4>
         <p>
             <fieldset>
                 <legend>Finalizar locação</legend>
-                <button  class="buttonforms" type="submit" onclick="alert('Cadastro Realizado')">Cadastrar</button>
+                <button  class="buttonforms" type="submit" onclick="validarDados()">Cadastrar</button>
                 <button class="buttonforms" type="reset" onclick="alert('Deseja limpar todos os campos?')">Limpar</button>
             </fieldset>
         </p>
     </form>
+    <script>
+         function validarDados(){
+            var nome = document.getElementById("locacaocliente");
+           if(nome.value == ""){
+            alert("Atenção nome não informardo - Informe o nome")
+               nome.focus();
+               return false;
+
+           }
+           var datalocacao = document.getElementById("datalocacao");
+           if(datalocacao.value == ""){
+            alert("Atenção data da Locação não informada - Informe a data")
+               datalocacao.focus();
+               return false;
+
+           }
+           var datadevo = document.getElementById("dataentrega");
+           if(datadevo.value == ""){
+            alert("Atenção data da entrega não informada - Informe a data")
+               datadevo.focus();
+               return false;
+
+           }
+
+           alert('Cadastro Realizado')
+         }
+    </script>
     
 
 </body>

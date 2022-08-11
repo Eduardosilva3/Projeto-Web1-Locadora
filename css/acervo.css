@@ -148,3 +148,48 @@ button:hover{
     cursor: pointer;
     
 }
+
+.paragrafo{
+    width: auto;
+    height: auto;
+    background-color: white;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    border: solid 5px black;
+    border-radius: 15%;
+}
+
+.divTrailer{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    
+    text-align: center;
+}
+iframe{
+    width: 500px;
+    height: 400px;
+    border: solid 5px black;
+    border-radius: 15%;
+}
+
+.divinfo{
+    max-width: 500px;
+
+    align-items: center;
+    text-align: center;
+    
+}
+@font-face {
+    font-family:dyna ;
+    src: url(../fontes/DynaPuff/static/DynaPuff/DynaPuff-Medium.ttf);
+}
+h2{
+    font-family: dyna;
+}
+.campoobrigatorio{
+    color: red;
+    
+}

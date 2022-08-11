@@ -59,8 +59,16 @@ header{
     height: 50px;
     margin: auto;
 }
+
+@font-face {
+    font-family: rubik;
+    src: url(../fontes/Silkscreen/Silkscreen-Bold.ttf);
+}
 .texto{
     text-align: center;
+    font-family: rubik;
+
+
 }
 
 button:hover{
@@ -75,4 +83,8 @@ a:hover{
     color: aliceblue;
     font-weight: bold;
     cursor: pointer;
+}
+.campoobrigatorio{
+    color: red;
+    
 }

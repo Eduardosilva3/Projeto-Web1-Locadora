@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        #divContainer{
+            width: 200px;
+            height: 50px;
+           
+        }
+        #divResultado{
+            background-color: orange;
+            border-radius: 50%;
+
+            color: red;
+            text-align: center;
+           
+        }
+        
+    </style>
     
 </head>
 <link rel="stylesheet" href="css/telalogin.css">
@@ -25,16 +41,18 @@
     </div>
     <div id="divlogin">
         <h1 id="textologin">Embarque nessa nova experência</h1>
+        
     <form action="navegação/telaprincipal.html" method="get">
         <label for="login">Usuário:</label><br>
         <input type="text" name="" id="login" size="20"><br>
         <label for="senha">Senha:</label><br>
         <input type="password" name="" id="senha" pattern=".{8,}" size="20" title="A senha deve conter 8 Digitos"><br><br>
-        <button class="buttonforms" type="submit">Entrar</button>
-        <p>Esqueceu a Senha?</p>
-        <a href="navegação/recuperar.html"><button class="buttonforms">Vamos Recuperar</button></a>
+        <button class="buttonforms" type="submit" onclick="validarDados()">Entrar</button>
+        
        
     </form>
+    <p>Esqueceu a Senha?</p>
+        <a href="navegação/recuperar.html"><button class="buttonforms">Vamos Recuperar</button></a>
     <br>
     <p>É Novo por aqui? Faça seu cadastro gratuito!</p>
     <a href="navegação/novousuario.html"><button>Cadastrar</button></a>
@@ -47,6 +65,8 @@
         </footer>
 
     </div>
+
+    
 
 </body>
 </html>

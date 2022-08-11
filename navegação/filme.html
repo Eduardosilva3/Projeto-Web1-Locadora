@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de filme</title>
+    <style>
+        #divContainer{
+            width: 200px;
+            height: 50px;
+           
+        }
+        #divResultado{
+            background-color: orange;
+            border-radius: 50%;
+
+            color: red;
+            text-align: center;
+           
+        }
+        
+    </style>
 </head>
 <link rel="stylesheet" href="../css/telaprincipal.css">
 <body>
@@ -30,40 +46,49 @@
         <fieldset>
             <legend><label for="titulofilme">Título</label></legend>
             
-            <input type="text" name="" id="titulofilme"  size="40"  placeholder="Digite o titulo do filme">
+            <input type="text" name="" id="titulofilme"  size="40"  placeholder="Digite o titulo do filme" required>
+            <h2 class="campoobrigatorio">*</h2>
         </fieldset>
         
         <p>
             <fieldset>
                 <legend ><label for="generofilme">Gênero</label></legend>
         
-            <select name="" id="generofilme">
+            <select name="" id="generofilme" required>
+            <option value=""></option>
             <option value="Ação"> Ação</option>
             <option value="Comédia"> Comédia</option>
             <option value="Drama"> Drama</option>
             <option value="Romance">Romance</option>
             <option value="Terror">Terror</option>
+            
 
              </select>
+             <h2 class="campoobrigatorio">*</h2>
             </fieldset>
             
 
         </p>
         <p>
+            <div id="divContainer">
+                <div id="divResultado"></div>
+    
+               </div>
             <fieldset>
             <legend>Premiaçôes do Filme</legend>
-            <input type="checkbox" name="" id="oscar">
+            <input type="checkbox" name="premio" id="oscar">
             <label for="oscar">Óscar</label>
-            <input type="checkbox" name="" id="grammy">
+            <input type="checkbox" name="premio" id="grammy">
             <label for="grammy">Grammy</label>
-            <input type="checkbox" name="" id="brasileiro">
+            <input type="checkbox" name="premio" id="brasileiro">
             <label for="brasileiro">Grande prêmio do cinema brasileiro</label>
-            <input type="checkbox" name="" id="globo">
+            <input type="checkbox" name="premio" id="globo">
             <label for="globo">Globo de Ouro</label>
-            <input type="checkbox" name="" id="asian">
+            <input type="checkbox" name="premio" id="asian">
             <label for="asian">Asian Film Awards</label>
-            <input type="checkbox" name="" id="nenhum">
+            <input type="checkbox" name="premio" id="nenhum">
             <label for="nenhum">Nenhum Prêmio</label>
+            <h2 class="campoobrigatorio">*</h2>
             </fieldset>
             
             
@@ -74,14 +99,64 @@
                 <textarea name="" id="descricao" cols="40" rows="10" placeholder="Digite a descrição do filme..."></textarea>
             </fieldset>
         </p>
+        <h4 class="campoobrigatorio">* Atenção campos obrigatorios!</h4>
         <p>
             <fieldset>
                 <legend>Finalizar cadastro</legend>
-                <button class="buttonforms" type="submit" onclick="alert('Cadastro Realizado')">Cadastrar</button>
+                <button class="buttonforms" type="submit" onclick="validarDados()">Cadastrar</button>
                 <button class="buttonforms" type="reset" onclick="alert('Deseja limpar todos os campos?')">Limpar</button>
             </fieldset>
         </p>
         
     </form>
+    <script>
+        function validarDados(){
+           // alert("Olá");
+           var divResultado = document.getElementById("divResultado");
+           //campo texto
+           var titulo = document.getElementById("titulofilme");
+           if(titulo.value == ""){
+               //alert("Informe o titulo!");
+               alert("Atenção título não informardo - Informe o título!")
+               titulo.focus();
+               
+               return false;
+
+           }
+
+           var genero = document.getElementById("generofilme");
+           if(genero.value == ""){
+            alert("Atenção gênero não informardo - Informe o gênero")
+               genero.focus();
+               return false;
+
+           }
+
+          
+
+           
+
+           var checkbox = document.getElementsByName("premio");
+           var checkboxSelecionado = false;
+           for(var i = 0; i < checkbox.length; i++){
+               if(checkbox[i].checked){
+                   checkboxSelecionado = true;
+               }
+           }
+
+           if(!checkboxSelecionado){
+            divResultado.innerHTML = "Informe o prêmio!";
+            
+               return false;
+           }
+           divResultado.innerHTML = "";
+
+          
+
+           
+           alert("Cadastro bem Sucedido");
+           
+        }
+    </script>
 </body>
 </html>

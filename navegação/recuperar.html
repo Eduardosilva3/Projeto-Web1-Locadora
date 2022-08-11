@@ -24,8 +24,29 @@
     
     <form action="../index.html" method="get">
         <label for="emailrec"><h3>DIGITE O E-MAIL CADASTRADO NO SISTEMA</h3></label>
-        <input type="email" name="" id="emailrec" size="40"><br><br>
+        <div><input type="email" name="" id="emailrec" size="40" required></div>
+        <br><br>
         <button type="submit" onclick="alert('Você receberá um e-mail de recuperação de senha')">Enviar</button>
     </form>
+    <h4 class="campoobrigatorio">* Atenção campos obrigatorios!</h4>
+    <script>
+         function validarDados(){
+            var email = document.getElementById("email");
+           if(email.value == ""){
+               //alert("Informe o titulo!");
+               alert("Atenção E-mail não informardo - Informe o E-mail!")
+               email.focus();
+               return false;
+
+
+
+           }
+
+
+
+           alert("Cadastro bem-Sucedido");
+         }
+    </script>
+    
 </body>
 </html>
